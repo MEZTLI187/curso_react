@@ -1,17 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//Asi se importa cuando es por default
+import heroes from "./data/heroes";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//callback = funcion ejecutandose dentro de otra funcion
+const nuevo = heroes.map((item) => {
+    return {...item, version: 1}; //usando desestructuracion para no modificar arreglo original
+});
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+console.log({heroes});
+console.log({nuevo});
