@@ -1,5 +1,5 @@
 //Asi se importa cuando es por default
-import heroes from "./data/heroes";
+import heroes from "../data/heroes";
 
 //callback = funcion ejecutandose dentro de otra funcion
 //const nuevo = heroes.map((item) => {  //forma de recorrer el arreglo
